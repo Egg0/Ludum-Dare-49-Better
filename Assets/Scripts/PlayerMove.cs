@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour
         RaycastHit2D raycast = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + 0.1f, GroundMask);
         isGrounded = raycast.collider != null;
 
-        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+        if (isGrounded && (Input.GetKeyDown(KeyCode.W)))
         {
             
             rb.velocity += Vector2.up * jumpForce;

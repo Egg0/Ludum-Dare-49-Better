@@ -13,13 +13,13 @@ TagManager:
   - 
   - Water
   - UI
-  - PlayerBounds
+  - Player
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Stable
+  - Enemy
+  - PlayerBounds
+  - ScreenBounds
   - 
   - 
   - 
