@@ -6,6 +6,7 @@ public class EnemyAttacks : MonoBehaviour
 {
 
     public Rigidbody2D horse;
+    public Rigidbody2D chicken;
     private float clock;
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class EnemyAttacks : MonoBehaviour
     {
         if (Time.time > clock + 5)
         {
-            SpawnHorse();
+            SpawnChicken();
             switch ((int)(Random.value * 10))
             {
                 case 0:
@@ -63,9 +64,17 @@ public class EnemyAttacks : MonoBehaviour
 
     void SpawnHorse()
     {
-        // Debug.Log("Spawned horse");
+        // Debug.Log("Spawned Horse");
         Rigidbody2D horse1;
         horse1 = Instantiate(horse, transform.position, transform.rotation);
         horse1.velocity = transform.TransformDirection(Vector2.left * 10);
+    }
+
+    void SpawnChicken()
+    {
+        Debug.Log("Spawned Chicken");
+        Rigidbody2D chicken1;
+        chicken1 = Instantiate(chicken, transform.position, transform.rotation);
+        chicken1.velocity = transform.TransformDirection(Vector2.left * 10);
     }
 }
