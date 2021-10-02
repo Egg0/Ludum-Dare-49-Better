@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Eggs : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 5f;
     public int damage = 10;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class Eggs : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        // Debug.Log(collision.name);
         PlayerHealth player = collision.GetComponent<PlayerHealth>();
         if (player != null)
         {

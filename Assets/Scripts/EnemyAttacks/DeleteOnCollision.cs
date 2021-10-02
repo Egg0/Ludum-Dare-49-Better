@@ -8,8 +8,14 @@ public class DeleteOnCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerObject")
         {
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                // They take 10 damage
+                player.takeDamage(10);
+                Debug.Log(player.name + " has " + player.currentHealth);
+            }
             Destroy(gameObject);
-            Debug.Log("Delete object");
         }
     }
 }

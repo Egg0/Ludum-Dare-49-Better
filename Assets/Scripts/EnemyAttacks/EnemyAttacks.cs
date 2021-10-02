@@ -75,6 +75,6 @@ public class EnemyAttacks : MonoBehaviour
         Debug.Log("Spawned Chicken");
         Rigidbody2D chicken1;
         chicken1 = Instantiate(chicken, transform.position, transform.rotation);
-        chicken1.velocity = transform.TransformDirection(Vector2.left * 10);
+        chicken1.velocity = transform.TransformDirection(Vector2.left * 5);
     }
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -1873749570366099284}
   - component: {fileID: -2477439548922207553}
   - component: {fileID: -1184412280530896446}
-  - component: {fileID: 4045555782106477762}
   m_Layer: 10
   m_Name: Egg
   m_TagString: Untagged
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -2117111999
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: a540a420af47445438c90d53b9f828a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27d84c9a0bfedbb4b9b9dcc43cda5085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,15 +136,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 10
---- !u!114 &4045555782106477762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8966673214098479749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad76f26bcd1b1d4c8ac1106963825cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
