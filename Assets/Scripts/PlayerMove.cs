@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody2D rb;
     public float velocity;
     public float jumpForce;
-    private bool isGrounded;
-    
     public LayerMask GroundMask;
+
+    private Rigidbody2D rb;
+    private bool isGrounded;
+    private bool m_FacingRight;
     private BoxCollider2D boxCollider;
 
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        Debug.Log("Initialized player man");
+        m_FacingRight = true;
     }
 
     // Update is called once per frame
@@ -35,10 +36,28 @@ public class PlayerMove : MonoBehaviour
         RaycastHit2D raycast = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + 0.1f, GroundMask);
         isGrounded = raycast.collider != null;
 
-        if (isGrounded && (Input.GetKeyDown(KeyCode.W)))
+        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             
             rb.velocity += Vector2.up * jumpForce;
         }
+
+        if (movement > 0 && !m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (movement < 0 && m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        m_FacingRight = !m_FacingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
