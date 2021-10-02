@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3364291733185853324}
   - component: {fileID: 2813739004822272944}
   - component: {fileID: 8529269200072041589}
+  - component: {fileID: -2154610409888833139}
   m_Layer: 0
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: EnemyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +121,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 4973255329364897684}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-2154610409888833139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973255329364897684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad76f26bcd1b1d4c8ac1106963825cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
