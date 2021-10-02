@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208413035}
   - component: {fileID: 208413036}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +751,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
-  jumpForce: 10
+  jumpForce: 30
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1867543978
 GameObject:
   m_ObjectHideFlags: 0

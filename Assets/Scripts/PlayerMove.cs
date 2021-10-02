@@ -7,11 +7,16 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb;
     public float velocity;
     public float jumpForce;
+    private bool isGrounded;
+    
+    public LayerMask GroundMask;
+    private BoxCollider2D boxCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         Debug.Log("Initialized player man");
     }
 
@@ -26,9 +31,13 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+        // Raycast to check grounded
+        RaycastHit2D raycast = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + 0.1f, GroundMask);
+        isGrounded = raycast.collider != null;
+
+        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
-            Debug.Log("Jump");
+            
             rb.velocity += Vector2.up * jumpForce;
         }
     }
