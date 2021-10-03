@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6354610275235704530}
   bulletPrefab: {fileID: 4196837666679442855, guid: 68e489065274b0e4c98e2048d2635096, type: 3}
-  fireDelay: 0
+  fireDelay: 0.15
 --- !u!114 &6354610275789645156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 128
+  victory: {fileID: 11400000, guid: 12b11da1eac71964d8205956f3e88f03, type: 2}
 --- !u!114 &9163374430298355370
 MonoBehaviour:
   m_ObjectHideFlags: 0

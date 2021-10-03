@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float velocity;
     public float jumpForce;
     public LayerMask GroundMask;
+    public BoolSO victory;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -24,7 +25,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float movement = Input.GetAxisRaw("Horizontal");
+        float movement = 0;
+        if (!victory.active)
+        {
+            movement = Input.GetAxisRaw("Horizontal");
+        }
+
         if (movement != 0) {
             rb.velocity = new Vector2(velocity * movement, rb.velocity.y);
         } else
