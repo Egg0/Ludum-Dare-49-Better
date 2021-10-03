@@ -9,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     public LayerMask GroundMask;
     public BoolSO victory;
 
+    public SpriteRenderer sprite;
+    private Vector2 initialScale;
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool m_FacingRight;
@@ -20,6 +23,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         m_FacingRight = true;
+        initialScale = transform.localScale;
     }
 
     // Update is called once per frame
@@ -58,6 +62,15 @@ public class PlayerMove : MonoBehaviour
         {
             // ... flip the player.
             Flip();
+        }
+
+        // Crouch
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.localScale = new Vector2(initialScale.x, initialScale.y * 0.5f);
+        } else
+        {
+            transform.localScale = initialScale;
         }
     }
 
