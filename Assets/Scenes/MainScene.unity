@@ -720,17 +720,6 @@ Transform:
   m_Father: {fileID: 534756664}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338671703 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1338671703, guid: 229cbc143add06d4fb71fe8c96b8d65f, type: 3}
-  m_PrefabInstance: {fileID: 5476417419121220826}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834f3654ea1edb5479240f2b5e63c4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1443644851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,14 +1195,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 971979944, guid: 229cbc143add06d4fb71fe8c96b8d65f, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 1338671703}
-    - target: {fileID: 1338671702, guid: 229cbc143add06d4fb71fe8c96b8d65f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1100397046713473973, guid: 229cbc143add06d4fb71fe8c96b8d65f, type: 3}
       propertyPath: playerHealth
       value: 
@@ -1367,5 +1348,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9163374430298355370, guid: f2081ec0cc814654c85cf6d44c90b548, type: 3}
+      propertyPath: playerDeath
+      value: 
+      objectReference: {fileID: 11400000, guid: 42d28e2603cded04fa8c20422e697646, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2081ec0cc814654c85cf6d44c90b548, type: 3}
