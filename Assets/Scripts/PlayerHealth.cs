@@ -8,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public BoolSO playerDeath;
     private Animator ac;
+    private CameraShake cam;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         ac = GetComponentInChildren<Animator>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(int damage)
     {
         ac.SetTrigger("Damage");
+        cam.TriggerShake(0.1f, 0.2f, false);
+
         currentHealth -= damage;
         if (currentHealth <= 0)
         {

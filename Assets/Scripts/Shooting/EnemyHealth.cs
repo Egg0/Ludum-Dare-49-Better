@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int health = 50;
     private Animator ac;
+    private CameraShake cam;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
         {
             ac.SetFloat("IdleOffset", Random.Range(0, 1f));
         }
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
     }
 
     public void takeDamage(int damage)
@@ -32,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log("Destroyed " + gameObject.name);
+        cam.TriggerShake(0.1f, 0.2f, false);
         Destroy(gameObject);
     }
 }
