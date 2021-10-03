@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     float currentTime;
     public int elapsedSeconds;
     public TextMeshProUGUI currentText;
+    public BoolSO victory;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (victory != null && victory.active)
+        {
+            isRunning = false;
+        }
+
         if (isRunning)
         {
             currentTime = currentTime + Time.deltaTime;
@@ -34,7 +40,7 @@ public class Timer : MonoBehaviour
         int seconds = (elapsedSeconds - (hours * 3600) - (minutes * 60));
         
         // Purposeful Ordering
-        timeValues.Add(hours);
+        //timeValues.Add(hours);
         timeValues.Add(minutes);
         timeValues.Add(seconds);
 
