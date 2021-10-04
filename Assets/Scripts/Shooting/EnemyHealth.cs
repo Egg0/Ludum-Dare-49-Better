@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
     public void takeDamage(int damage)
     {
         ac.SetTrigger("Damage");
+        AudioManager.instance.Play("Impact");
         health -= damage;
         if (health <= 0)
         {
@@ -34,6 +35,7 @@ public class EnemyHealth : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log("Destroyed " + gameObject.name);
+        AudioManager.instance.Play("Death");
         cam.TriggerShake(0.1f, 0.2f, false);
         Destroy(gameObject);
     }

@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     public void takeDamage(int damage)
     {
         ac.SetTrigger("Damage");
+        AudioManager.instance.Play("PlayerHurt");
         cam.TriggerShake(0.1f, 0.2f, false);
 
         currentHealth -= damage;
@@ -42,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        AudioManager.instance.Play("Death");
         if (playerDeath != null)
             playerDeath.active = true;
         Destroy(gameObject);
