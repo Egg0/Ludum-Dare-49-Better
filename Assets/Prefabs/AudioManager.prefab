@@ -70,6 +70,36 @@ MonoBehaviour:
     volume: 0.2
     loop: 0
     source: {fileID: 0}
+  - name: Horse
+    clip: {fileID: 8300000, guid: 788284430b0e1ef4e8b2883b2e370447, type: 3}
+    pitch: 1
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Chicken
+    clip: {fileID: 8300000, guid: 9ebbfc8f3ce442543b07542a6a21766d, type: 3}
+    pitch: 1
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Pig
+    clip: {fileID: 8300000, guid: d38a342366aa7094ea3571eb5eb033e1, type: 3}
+    pitch: 1
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Shotgun
+    clip: {fileID: 8300000, guid: e816680becaa6e341a8b3d5d3f1b7d47, type: 3}
+    pitch: 1
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitchfork
+    clip: {fileID: 8300000, guid: a60c6bd091fb1e74cbc4e6be89c057ef, type: 3}
+    pitch: 1
+    volume: 0.05
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &5073200020678674080
 MonoBehaviour:
   m_ObjectHideFlags: 0

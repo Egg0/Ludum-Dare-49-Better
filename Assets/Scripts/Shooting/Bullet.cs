@@ -20,7 +20,6 @@ public class Bullet : MonoBehaviour
         if (enemy != null)
         {
             enemy.takeDamage(damage);
-            Debug.Log(enemy.name + " has " + enemy.health);
         }
         Destroy(gameObject);
     }

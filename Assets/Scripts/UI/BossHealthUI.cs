@@ -28,11 +28,11 @@ public class BossHealthUI : MonoBehaviour
         float percentHealth = barnHealth.health / maxHealth;
         HealthBar.fillAmount = percentHealth;
 
-        if (percentHealth < 0.25f)
+        if (percentHealth < 0.3f)
         {
             HealthBar.color = redHealth;
         }
-        else if (percentHealth < 0.5f)
+        else if (percentHealth < 0.7f)
         {
             HealthBar.color = yellowHealth;
         }

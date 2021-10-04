@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerObject
   - EnemyObject
+  - Pitchfork
+  - Chicken
   layers:
   - Default
   - TransparentFX

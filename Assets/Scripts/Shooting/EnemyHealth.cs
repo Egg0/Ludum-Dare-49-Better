@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int health = 50;
+    public int health = 1;
     private Animator ac;
     private CameraShake cam;
 
