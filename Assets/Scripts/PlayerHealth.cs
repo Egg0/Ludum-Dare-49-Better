@@ -90,4 +90,15 @@ public class PlayerHealth : MonoBehaviour
     {
         sprite.enabled = !sprite.enabled;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "HealthPickup")
+        {
+            currentHealth += maxHealth / 3;
+            if (currentHealth > maxHealth) currentHealth = maxHealth;
+            Destroy(collision.gameObject);
+            AudioManager.instance.Play("Pickup");
+        }
+    }
 }

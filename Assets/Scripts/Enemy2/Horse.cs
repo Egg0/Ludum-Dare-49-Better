@@ -10,6 +10,7 @@ public class Horse : MonoBehaviour
 
     private EnemyHealth myHealth;
     private Rigidbody2D rb;
+    private Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,13 @@ public class Horse : MonoBehaviour
         myHealth.health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("Horse");
+        movement = new Vector2(-1f * velocity, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-1f * velocity, 0);
+        rb.velocity = movement;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

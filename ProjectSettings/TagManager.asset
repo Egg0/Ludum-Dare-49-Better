@@ -8,6 +8,11 @@ TagManager:
   - EnemyObject
   - Pitchfork
   - Chicken
+  - Stable
+  - MissileAmmo
+  - Ground
+  - HealthPickup
+  - Bounds
   layers:
   - Default
   - TransparentFX
@@ -22,7 +27,7 @@ TagManager:
   - Enemy
   - PlayerBounds
   - ScreenBounds
-  - 
+  - Pickup
   - 
   - 
   - 

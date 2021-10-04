@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public ParticleSystem DeathParticles;
+    public List<GameObject> Pickups;
+
     public int health = 1;
     private Animator ac;
     private CameraShake cam;
@@ -34,9 +37,17 @@ public class EnemyHealth : MonoBehaviour
 
     protected virtual void Die()
     {
+        // Have a 40% chance of dropping a pickup
+        if (Pickups.Count > 0 && Random.Range(0, 1f) > 0.6f)
+        {
+            GameObject choice = Pickups[Random.Range(0, Pickups.Count)];
+            Instantiate(choice, transform.position, choice.transform.rotation);
+        }
+
         Debug.Log("Destroyed " + gameObject.name);
         AudioManager.instance.Play("Death");
+        Instantiate(DeathParticles, transform.position, Quaternion.identity);
         cam.TriggerShake(0.1f, 0.2f, false);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }

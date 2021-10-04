@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f23bcb751c779943b9ba97832fd5989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathParticles: {fileID: 8600489406630824709, guid: adbb6ade06a588345ad1335464d8d2ff, type: 3}
+  Pickups:
+  - {fileID: 6638773848098261490, guid: 5735ac0139ccdff4792453ef929079be, type: 3}
   health: 50
 --- !u!114 &7206098474750966643
 MonoBehaviour:
@@ -143,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a55a54f175e0844ca6edddc6dfcc544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 80
   damage: 15
   velocity: 5
 --- !u!95 &6514735290596691023

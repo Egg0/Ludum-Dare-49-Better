@@ -13,6 +13,7 @@ public class Chicken : MonoBehaviour
     private EnemyHealth myHealth;
     private Rigidbody2D rb;
     private float nextEggTime;
+    private Vector2 movement;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +23,13 @@ public class Chicken : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("Chicken");
         nextEggTime = Time.time + Random.Range(0, nextEggTime);
+        movement = new Vector2(-1f * velocity, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-1f * velocity, 0);
+        rb.velocity = movement;
 
         if (Time.time > nextEggTime)
         {

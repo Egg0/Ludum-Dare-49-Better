@@ -130,6 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f23bcb751c779943b9ba97832fd5989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathParticles: {fileID: 8600489406630824709, guid: adbb6ade06a588345ad1335464d8d2ff, type: 3}
+  Pickups:
+  - {fileID: 4532464087349478759, guid: e27a33742e6d62248b3c72a78a6ece87, type: 3}
+  - {fileID: 6638773848098261490, guid: 5735ac0139ccdff4792453ef929079be, type: 3}
   health: 50
 --- !u!114 &6087718120696531777
 MonoBehaviour:
@@ -144,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   egg: {fileID: 7650128105572712249, guid: 4e3474cbfb3e5ac48a9410c212a9d906, type: 3}
-  maxHealth: 30
+  maxHealth: 20
   damage: 5
   velocity: 6
   eggTimer: 0.75
